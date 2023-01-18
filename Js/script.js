@@ -23,8 +23,9 @@ const showCompleted = document.getElementById("showCompleted");
 window.onload = function(){storage()}
 function storage(){
     stored = localStorage.getItem("list");
-    console.log(stored)
     toDoList = stored.split(",");
+    stored = localStorage.getItem("completedList");
+    completedList = stored.split(",");
     display();
 }
 
@@ -80,6 +81,7 @@ function display(){
         taskRow.appendChild(newDiv);
     }
     localStorage.setItem("list", toDoList);
+    localStorage.setItem("completedList", completedList);
     if(showCompleted.checked) displayCompleted();
 }
 
