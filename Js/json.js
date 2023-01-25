@@ -24,6 +24,7 @@ const newItem = document.getElementById("newItem");
 const itemTextField = document.getElementById("taskInput");
 const taskRow = document.getElementById("taskRow");
 const showCompleted = document.getElementById("showCompleted");
+const switchCheckBox = document.getElementById("switch");
 
 newItem.onclick = function() {addNewItem();}
 function addNewItem(){
@@ -67,11 +68,7 @@ function displayPending(index){
         draginated = event.target;
     })
     newDiv.addEventListener("drop", (event)=>{
-        item = event.target.id;
-        temp = data[item];
-        data[item] = data[draginated.id];
-        data[draginated.id] = temp;
-        display();
+        changeItems(event);
     })
     
 
@@ -121,11 +118,7 @@ function displayCompleted(index){
         draginated = event.target;
     })
     newDiv.addEventListener("drop", (event)=>{
-        item = event.target.id;
-        temp = data[item];
-        data[item] = data[draginated.id];
-        data[draginated.id] = temp;
-        display();
+        changeItems(event);
     })
     
 
@@ -148,6 +141,14 @@ function displayCompleted(index){
     newDiv.appendChild(text)
     newDiv.appendChild(trashCan);
     taskRow.appendChild(newDiv);
+}
+
+function changeItems(event){
+    item = event.target.id;
+    temp = data[item];
+    data[item] = data[draginated.id];
+    data[draginated.id] = temp;
+    display();
 }
 
 function unComplete(i){

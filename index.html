@@ -11,10 +11,10 @@
 <body style="background-color: var(--bs-tertiary-bg);">
     <div class="container center p-4">
         <div class="row center p-2">
-            <div class="col-md-10 p-0 pe-2">
-                <input type="task" class="form-control py-3" id="taskInput" placeholder="What needs to be done?">
+            <div class="col-md-10 p-0 pe-md-2">
+                <input type="task" class="form-control py-3 pe-sm-0" id="taskInput" placeholder="What needs to be done?">
             </div>
-            <button type="button" class="btn btn-primary col-md-2 mt-0" id="newItem">Legg til +</button>
+            <button type="button" class="btn btn-primary col-md-2 mt-md-0 mt-sm-2" id="newItem">Legg til +</button>
         </div>
         <div class="row p-2 pb-5" id="taskRow">
             <!-- <div class="col-md-12 px-3 py-3 fs-5 rounded-2 border" style="background-color: var(--bs-body-bg); color: var(--bs-body-color);">
@@ -36,10 +36,10 @@
             </div>
         </div>
         <div class="col-md-3 col-lg-3 p-2">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox">
-                <label class="form-check-label text-light-emphasis" for="flexCheckDefault">Show Deleted</label>
-            </div>
+            <!-- <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="switch" checked>
+                <label class="form-check-label text-light-emphasis" for="flexCheckDefault">Switch</label>
+            </div> -->
         </div>
         <div class="col-md-1 col-lg-1 p-0">
             <button type="button" id="changeMode" class="btn btn-dark" style="float: right; background-color: var(--bs-body-bg); color: var(--bs-body-color);">🌙</button>
